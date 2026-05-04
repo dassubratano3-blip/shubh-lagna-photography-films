@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-maroon: #6A1021;
+  --color-maroon-dark: #4A0B17;
+  --color-gold: #C5A059;
+  --color-gold-light: #E0C583;
+  --color-ivory: #FAFAEA; /* softer white */
+  --color-sand: #F5EFEB;
+  --color-ink: #1F1517;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: #FAFAFA;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-serif);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Image masking for organic shapes */
+.mask-arch {
+  mask-image: radial-gradient(circle at 50% 100%, black 50%, transparent 50%), linear-gradient(black, black);
+  mask-size: 100% 50%, 100% 50%;
+  mask-position: top, bottom;
+  mask-repeat: no-repeat;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
